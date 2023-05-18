@@ -3,55 +3,6 @@ const WebpackPwaManifest = require('webpack-pwa-manifest');
 const path = require('path');
 const { InjectManifest } = require('workbox-webpack-plugin');
 
-// TODO: Add and configure workbox plugins for a service worker and manifest file.
-new InjectManifest({
-  swSrc: './src-sw.js',
-  swDest: 'src-sw.js',
-}),
-
-new WebpackPwaManifest({
-  fingerprints: false,
-  inject: true,
-  name: 'text-editor',
-  short_name: 'JATE',
-  description: 'Progressive Web Application Text Editor',
-  background_color: 'white',
-  theme_color: 'darkblue',
-  start_url: '/',
-  publicPath: '/',
-  icons: [
-    {
-      src: path.resolve('src/images/logo.png'),
-      sizes: [96, 128, 192, 256, 384, 512],
-      destination: path.join('assets', 'icons'),
-    },
-  ],
-}),
-
-
-
-
-module: {
-  // TODO: Add CSS loaders and babel to webpack.
-  rules: [
-    {
-      test: /\.css$/i,
-      use: ['style-loader', 'css-loader'],
-    },
-    {
-      test: /\.m?js$/,
-      exclude: /node_modules/,
-      use: {
-        loader: 'babel-loader',
-        options: {
-          presets: ['@babel/preset-env'],
-          plugins: ['@babel/plugin-proposal-object-rest-spread', '@babel/transform-runtime']
-        },
-      },
-    },
-  ],
-},
-
 
 module.exports = () => {
   return {
@@ -65,13 +16,52 @@ module.exports = () => {
       path: path.resolve(__dirname, 'dist'),
     },
     plugins: [
-      
+      // Add and configure workbox plugins for a service worker and manifest file.
+      new InjectManifest({
+        swSrc: './src-sw.js',
+        swDest: 'src-sw.js',
+      }),
+
+      new WebpackPwaManifest({
+        fingerprints: false,
+        inject: true,
+        name: 'text-editor',
+        short_name: 'JATE',
+        description: 'Progressive Web Application Text Editor',
+        background_color: '#325ca3',
+        theme_color: '#235ca3',
+        start_url: '/',
+        publicPath: '/',
+        icons: [
+          {
+            src: path.resolve('src/images/logo.png'),
+            sizes: [96, 128, 192, 256, 384, 512],
+            destination: path.join('assets', 'icons'),
+          },
+        ],
+      }),
     ],
 
     module: {
-      rules: [
-        
-      ],
-    },
-  };
+      
+    // Add CSS loaders and babel to webpack.
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.m?js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env'],
+            plugins: ['@babel/plugin-proposal-object-rest-spread', '@babel/transform-runtime']
+          },
+        },
+      },
+    ],
+  },
+};
 };
