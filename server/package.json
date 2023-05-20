@@ -4,7 +4,10 @@
     "description": "",
     "main": "server.js",
     "scripts": {
-        "server": "nodemon server.js --ignore client"
+        "dev": "webpack-dev-server",
+        "build": "webpack --mode production",
+        "start": "webpack --watch",
+        "heroku-postbuild": "webpack -p --config ./webpack.prod.config.js --progress"
     },
     "keywords": [],
     "author": "",
