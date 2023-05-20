@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A text editor that meets the PWA criteria and feature a number of data persistence techniques that serve as redundancy in case of options is not supported by the browser.  The application will also function offline",
   "engines": {
-    "npm": "18.14.0"
+    "npm": "18.16.0"
   },
   "main": "server.js",
   "scripts": {

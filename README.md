@@ -6,6 +6,11 @@ This is a text editor utilizing Progressive Web Application methods to create wh
 
 You can access it here:
 
+## Deployed Page & Repo
+
+https://pwa-text-editor-njohnson-app.herokuapp.com/
+https://github.com/codelearning2021/progressive-web-application-text-editor
+
 ## Table of Contents
 
 * [Installation](#installation)
@@ -17,7 +22,15 @@ You can access it here:
 
 ## Installation
 
+Clone the repository and run
+
+```
+npm install
+```
+to cover any dependencies you'll need. Or simply access the app in browser.
+
 ## Usage
+Open the deployed link in the browser (above). The "install" button can be used for offline use of the application..
 
 ## Repo
 
