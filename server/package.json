@@ -1,21 +1,18 @@
 {
-    "name": "JATE",
-    "version": "1.0.0",
-    "description": "",
-    "main": "server.js",
-    "scripts": {
-        "dev": "webpack-dev-server",
-        "build": "webpack --mode production",
-        "start": "webpack --watch",
-        "heroku-postbuild": "webpack -p --config ./webpack.prod.config.js --progress"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "dependencies": {
-        "express": "^4.17.1"
-    },
-    "devDependencies": {
-        "nodemon": "^2.0.4"
-    }
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+      "server": "nodemon server.js --ignore client"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+      "express": "^4.17.1"
+  },
+  "devDependencies": {
+      "nodemon": "^2.0.4"
+  }
 }
