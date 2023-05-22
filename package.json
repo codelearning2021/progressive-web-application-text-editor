@@ -15,7 +15,7 @@
     "build": "cd client && npm run build",
     "install": "cd client && npm install",
     "client": "cd client && npm start",
-    "heroku-prebuild": "npm install --dev"
+    "heroku-prebuild": "npm install --include=dev"
   },
   "keywords": [],
   "author": "Stella Ling",
@@ -26,7 +26,8 @@
   },
   "devDependencies": {
     "concurrently": "^5.2.0",
-    "nodemon": "^1.4.1"
+    "nodemon": "^1.4.1",
+    "webpack": "^5.83.1"
   },
   "repository": {
     "type": "git",
