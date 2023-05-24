@@ -16,6 +16,7 @@ https://github.com/codelearning2021/progressive-web-application-text-editor
 * [Installation](#installation)
 * [Usage](#usage)
 * [Repo](#repo)
+* [screenshot](#screenshot)
 * [Starter Code](#starter-code)
 * [License](#license)
 * [Contact](#contact)
@@ -27,7 +28,13 @@ Clone the repository and run
 ```
 npm install
 ```
-to cover any dependencies you'll need. Or simply access the app in browser.
+to cover any dependencies you'll need then
+
+```
+npm start
+```
+
+ to run application on localhost. Or simply access the app in browser using the Heroku link.
 
 ## Usage
 Open the deployed link in the browser (above). The "install" button can be used for offline use of the application..
@@ -35,6 +42,10 @@ Open the deployed link in the browser (above). The "install" button can be used 
 ## Repo
 
 https://github.com/codelearning2021/progressive-web-application-text-editor
+
+## Screenshot
+
+<img src="https://github.com/codelearning2021/progressive-web-application-text-editor/blob/master/PWA%20Text%20Editor.png?raw=true" />
 
 ## Starter Code
 
