@@ -6,10 +6,9 @@ This is a text editor utilizing Progressive Web Application methods to create wh
 
 You can access it here:
 
-## Deployed Page & Repo
+## Deployed Page
 
 https://pwa-text-editor-njohnson-app.herokuapp.com/
-https://github.com/codelearning2021/progressive-web-application-text-editor
 
 ## Table of Contents
 
